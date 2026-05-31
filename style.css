@@ -25,7 +25,7 @@ header {
   text-align: center;
 }
 
-#title{
+.title{
 background-color:var(--tittle);
 align-self: stretch;
 border-radius: 8px;
