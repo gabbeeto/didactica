@@ -8,7 +8,8 @@
 html{
 --defaultBackground: #F0BDDD;
 --tittle: #BDF0D7;
---htmlBackground: #E4D5E8
+--htmlBackground: #E4D5E8;
+--listBackground: #BDD4F0;
 }
 
 html{
@@ -60,10 +61,21 @@ border-radius: 10px;
 }
 
 ul,ol{
+  background-color: var(--listBackground);
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
   text-align: left;
-  padding-left: 20px;
+  padding: 20px;
+  border-radius: 10px;
+
+  margin: 3px;
   }
+ul > p, ol > p{
+justify-self: center;
+align-self: center;
+text-align: center;
+font-weight: bold;
+  
+}
