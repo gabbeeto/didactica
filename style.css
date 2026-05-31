@@ -51,6 +51,13 @@ article {
   border-radius: 8px;
 }
 
+img{
+margin-top: 2px;
+width: 42vw;
+height: 31vw;
+border-radius: 10px;
+  
+}
 
 ul,ol{
   display: flex;
