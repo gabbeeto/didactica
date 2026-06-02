@@ -4,528 +4,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Didactica</title>
+  <title>Trabajo práctico de didáctica | Diálogo grupal</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional styles for the dialogue section – respects your color variables */
+    .dialog-section {
+      background-color: var(--defaultBackground);
+      border: 2px solid black;
+      margin: 5px;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .dialog-title {
+      background-color: var(--tittle);
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      font-size: var(--h3Size);
+      margin-bottom: 1rem;
+    }
+
+    .dialog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .author-card {
+      background: #fff9f0;
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-left: 6px solid;
+      transition: 0.2s;
+    }
+
+    .author-card.magda {
+      border-left-color: #9b2c2c;
+    }
+
+    .author-card.alicia {
+      border-left-color: #2b6e3c;
+    }
+
+    .author-card.picco {
+      border-left-color: #2c6e9e;
+    }
+
+    .author-name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .author-name img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--tittle);
+    }
+
+    .question {
+      font-weight: bold;
+      margin-top: 0.8rem;
+      color: #1e3a5f;
+      border-left: 3px solid var(--listBackground);
+      padding-left: 0.5rem;
+    }
+
+    .answer {
+      margin: 0.3rem 0 0.6rem 0;
+      font-size: var(--paragraphSize);
+    }
+
+    .citation {
+      font-size: 0.7rem;
+      color: #4a627a;
+      background: #eef2f7;
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 20px;
+    }
+
+    .encuentro,
+    .tension,
+    .normativa,
+    .cierre {
+      background: #fef7e0;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      margin: 1rem 0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--tittle);
+      color: black;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    hr {
+      margin: 1rem 0;
+      border: 1px solid #ccc;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1>
-      Trabajo práctico de didáctica</h1>
+    <h1>Trabajo práctico de didáctica</h1>
   </header>
 
   <main>
-    <article>
-      <h2 class="title">
-        "UNA DISCIPLINA EN BUSCA DE SU IDENTIDAD" - <a href="https://pt.wikipedia.org/wiki/Magda_Soares"
-          title="Magda Becker Soares" target="_blank">Magda Soares</a>
-      </h2>
-      <img src="./src/madga.jpg" alt="Imagen de Magda Soares">
-      <section>
+    <!-- ================= NUEVA SECCIÓN: DIÁLOGO GRUPAL ================= -->
+    <div class="dialog-section">
+      <div class="dialog-title">🎭 La didáctica en conversación</div>
+      <p><strong>Magda Becker Soares, Alicia Camilloni y Sofía Picco responden las preguntas clave:</strong></p>
 
-        <h3>
-          ¿Qué estudia la Didáctica, según
-          <a href="https://pt.wikipedia.org/wiki/Magda_Soares" title="Magda Becker Soares" target="_blank">Magda</a>?
-        </h3>
+      <!-- Grid con las tres autoras -->
+      <a href="./sum.html#soares" target="_blank">
 
-        <p>
+        <div class="dialog-grid">
+          <!-- Magda -->
+          <div class="author-card magda">
+            <div class="author-name">
+              <img src="./src/madga.jpg" alt="Magda Becker Soares">
+              <span>Magda Becker Soares</span>
+            </div>
+            <div class="question">📌 ¿Qué es la didáctica?</div>
+            <div class="answer">“Una disciplina que se organizó <strong>‘al revés’</strong>: primero normas y recetas,
+              sin
+              investigar el aula. Por eso está en crisis. No es una ciencia autónoma, sino un conjunto de
+              prescripciones.”
+            </div>
+            <div class="citation">(Becker Soares, p. 2)</div>
 
-          <a href="https://pt.wikipedia.org/wiki/Magda_Soares" title="Magda Becker Soares" target="_blank"> Magda
-            Soares</a>, de <a href="https://es.wikipedia.org/wiki/Universidad_Federal_de_Minas_Gerais"
-            target="_blank">la Universidad Federal de Minas Gerais</a>, dice que la Didáctica está pasando por una
-          "crisis de identidad". O sea, no sabe bien qué debería estudiar. Tradicionalmente se enfoca en el proceso de
-          enseñanza-aprendizaje que pasa dentro del aula, y ella propone que mejor sería que la Didáctica estudie el
-          aula tal como es en realidad.
-        </p>
+            <div class="question">⚙️ ¿Para qué sirve hoy?</div>
+            <div class="answer">“Para <strong>describir la realidad</strong> del aula sin anteojeras. Superar ‘la receta
+              o
+              la denuncia’. Solo con descripción podremos construir una nueva didáctica.”</div>
+            <div class="citation">(Becker Soares, p. 5-6)</div>
+          </div>
+      </a>
 
-        <p>La crisis aparece porque la Didáctica siempre fue muy normativa: desde <a
-            href="https://es.wikipedia.org/wiki/Comenio" target="_blank" title="Juan Amos Comenio">Comenio</a> y su <a
-            href="https://en.wikipedia.org/wiki/Great_Didactic" title="Didactica magna(La Gran Didáctica), 1633-1638"
-            target="_blank">"Didáctica Magna"</a> nos dio
-          reglas y consejos para enseñar. Pero otras disciplinas como la Psicología o la Lingüística lograron ser
-          ciencias independientes porque definieron bien su objeto de estudio. La Didáctica, en cambio, sigue pegada a
-          recetas y procedimientos.</p>
+      <a href="./sum.html#alicia">
+        <!-- Alicia Camilloni -->
+        <div class="author-card alicia">
+          <div class="author-name">
+            <img src="./src/alicia.jpg" alt="Alicia Camilloni">
+            <span>Alicia Camilloni</span>
+          </div>
+          <div class="question">📌 ¿Qué es la didáctica?</div>
+          <div class="answer">“Una <strong>disciplina teórica necesaria</strong> que estudia la acción pedagógica.
+            Describe, explica y fundamenta normas para resolver problemas de enseñanza, con compromiso ético y social.”
+          </div>
+          <div class="citation">(Camilloni, p. 5)</div>
 
-      </section>
+          <div class="question">⚙️ ¿Para qué sirve hoy?</div>
+          <div class="answer">“Para <strong>mejorar con justicia social</strong>: lograr que todos aprendan, revisar
+            currículos, diseñar estrategias y evaluar. Sin didáctica, la enseñanza quedaría en la intuición.”</div>
+          <div class="citation">(Camilloni, p. 4-5)</div>
+        </div>
+      </a>
+      <a href="sum.html#sofia" target="_blank">
+        <!-- Sofía Picco -->
+        <div class="author-card picco">
+          <div class="author-name">
+            <img src="./src/sofia.webp" alt="Sofía Picco">
+            <span>Sofía Picco</span>
+          </div>
+          <div class="question">📌 ¿Qué es la didáctica?</div>
+          <div class="answer">“Un <strong>campo de teorías de alcance medio</strong> sobre la enseñanza. Tiene una
+            dimensión normativa de ‘textura abierta’: orienta sin rigidizar.”</div>
+          <div class="citation">(Picco, p. 7 y 17)</div>
 
-      <section>
+          <div class="question">⚙️ ¿Para qué sirve hoy?</div>
+          <div class="answer">“Para ser una <strong>caja de herramientas</strong> que colabore con el docente, no para
+            darle órdenes. Para acompañar la resignificación de las normas en cada contexto.”</div>
+          <div class="citation">(Picco, p. 18-20)</div>
+        </div>
+    </div>
+    </a>
+    <!-- Puntos de encuentro -->
+    <div class="encuentro">
+      <span class="badge"> Rechazo al recetario técnico vacío</span>
+      <p>Las tres critican la didáctica tradicional meramente
+        prescriptiva. Becker dice que nació “al revés”; Camilloni sostiene que no cualquier método sirve sin
+        fundamento; Picco advierte contra el tecnicismo y aboga por normas abiertas.</p>
+    </div>
+    <div class="encuentro">
+      <span class="badge">Necesidad de investigar la práctica real</span>
+      <p>Becker pide describir el aula tal como es;
+        Camilloni afirma que la didáctica debe describir y explicar las prácticas de enseñanza; Picco recupera a Dewey
+        y Stenhouse para construir teoría desde la experiencia situada.</p>
+    </div>
 
-        <h3>
-          ¿Cómo nació la Didáctica?
-        </h3>
-        <p>La Didáctica se creó al revés de lo normal. Otras disciplinas primero investigaron la realidad, reflexionaron
-          sobre la práctica, y después sacaron principios y normas. La Didáctica arrancó directamente con normas y
-          principios, sin antes analizar a fondo lo que pasa en el aula.</p>
+    <div class="tension">
+      <span class="badge">El lugar de la normatividad (prescripción vs. descripción previa).</span>
+      <p>
+        <strong>Becker Soares</strong> desconfía de toda prescripción antes de describir. <strong>Camilloni</strong>
+        defiende la norma como parte legítima de la teoría didáctica. <strong>Picco</strong> actúa como puente: la
+        norma es necesaria pero de “textura abierta”. Tensión entre esperar a describir o prescribir orientativamente.
+      </p>
+    </div>
 
-        <p>O sea, la Didáctica empezó por donde las otras terminan: nunca logró autonomía porque en lugar de investigar,
-          se dedicó a decirle al profesores qué hacer. Por eso hoy es solo una disciplina que prescribe, que dice "hacé
-          esto", en vez de analizar la práctica real.</p>
+    <!-- Reflexión sobre dimensión normativa -->
+    <div class="normativa">
+      <span class="badge">🧭 ¿Prescribir u orientar?</span>
+      <p><strong>Retomando a Becker Soares y Picco:</strong> Becker teme que la norma derive en receta y ocultamiento
+        del aula real. Picco asume la norma como inevitable pero exige una <strong>“textura abierta”</strong>
+        (Frigerio). Conclusión: <strong>prescribir rígidamente es un error, pero orientar con fundamentos éticos y
+          contextuales es indispensable</strong>. La didáctica debe ser una brújula que se ajusta en terreno.</p>
+      <p><em>Citas clave:</em> Becker: “la Didáctica podría y debería ser la ciencia que estudiase el aula” (p.4).
+        Picco: “normatividad de textura abierta […] que habilite márgenes de creatividad” (p.17).</p>
+    </div>
 
-        <p>El problema de fondo es su historia rara. Para cambiarla, no basta con agregar análisis social o político
-          (eso sería meterse en terreno de la Sociología). Hay que empezar por reflexionar sobre su propia historia y
-          desde ahí reorientarla.</p>
-      </section>
-      <section>
+    <!-- Cierre propio del grupo -->
+    <div class="cierre">
+      <span class="badge">🎓 Lo que pensamos después de leer los tres textos</span>
+      <p><strong>¿Qué es la didáctica para nosotros?</strong><br>
+        Después de leer a Magda, Alicia y Sofía, llegamos a esta conclusión:<br><br>
+        La didáctica es una <strong>disciplina que estudia la enseñanza</strong>, pero no desde un escritorio dando
+        recetas. Su trabajo es <strong>mirar lo que pasa en el aula de verdad</strong> (como dice Magda),
+        <strong>comprometerse con que todos aprendan</strong> (como dice Alicia) y <strong>darle al docente
+          herramientas útiles pero flexibles</strong> (como dice Sofía).<br><br>
+        No sirve dar órdenes fijas que no sirven para todas las situaciones. Tampoco sirve solo criticar sin ofrecer
+        nada. Lo mejor es <strong>orientar, no ordenar</strong>. Que el docente pueda adaptar las ideas a su propia
+        clase.<br><br>
+        En resumen: <strong>la didáctica es una caja de herramientas que se arma entre todos, mirando la realidad,
+          para que los chicos aprendan mejor.</strong>
+      </p>
+    </div>
 
-        <h3>
-          ¿Cuál debería ser el objeto de estudio de la Didáctica?
-        </h3>
-        <p>Tradicionalmente se dice que la Didáctica estudia el "proceso de enseñanza-aprendizaje". Pero
-          <a href="https://pt.wikipedia.org/wiki/Magda_Soares" title="Magda Becker Soares" target="_blank">Magda
-            Soares</a>
-          tiene varias críticas:
-        </p>
-        <ol>
-          <p>Esto es lo que ella cuestiona:</p>
-          <li>Decir "enseñanza-aprendizaje" da a entender que si alguien enseña, el otro siempre aprende. Y no es así.
-            En realidad, enseñar y aprender son dos cosas diferentes. El objeto debería ser más la enseñanza que el
-            aprendizaje.</li>
-          <li>No se puede estudiar la enseñanza sin mirar el contenido específico (lengua, matemática, historia...).
-            Cada materia tiene su onda. La idea de que la Didáctica sirve "para todo y para todos" (desde <a
-              href="https://es.wikipedia.org/wiki/Comenio" target="_blank" title="Juan Amos Comenio">Comenio</a>) hace
-            que, al final, no le sirva mucho a los profesores.</li>
-          <li>La Didáctica no produce investigación propia. Toma prestado conocimiento de otras ciencias (sobre todo de
-            la Psicología). Solo se queda en recomendar normas y pasos.</li>
-          <li>Su objeto es súper amplio (porque el aprendizaje también lo estudia la Psicología) y a la vez muy
-            chiquito (reduce todo a solo enseñar-aprender).</li>
-          <li>Propuesta final: la Didáctica debería ser la ciencia que estudie el aula tal como es, con todo lo que pasa
-            ahí. El aula es un fenómeno bastante acotado como para estudiarlo bien, pero lo suficientemente amplio para
-            no dejar afuera nada importante de la educación formal.</li>
-        </ol>
-
-      </section>
-      <section>
-        <h3>
-          ¿Qué pasa realmente en el aula?
-        </h3>
-        <p>Según <a href="https://pt.wikipedia.org/wiki/Magda_Soares" title="Magda Becker Soares"
-            target="_blank">Magda</a>, en el aula pasan muchas cosas que la Didáctica tradicional ignora. Lo que parece
-          más obvio
-          (planificar, poner objetivos, elegir métodos, evaluar) es lo menos importante. Hay otros factores que
-          condicionan, dirigen y determinan la enseñanza y el aprendizaje, y muchas veces tapan lo demás.</p>
-
-        <p>Tanto la Didáctica tradicional (la que da recetas) como las críticas que le hacen parten de una visión muy
-          simple del aula: un profesor que enseña y un alumno que aprende. Las críticas denuncian intereses históricos
-          (como la hegemonía burguesa) y dicen que no es neutral, pero no proponen una nueva Didáctica. Últimamente se
-          quiere recuperar la "competencia técnica", pero eso puede ser un "tecnicismo pedagógico disfrazado" (<a
-            href="https://www.ppge.ufscar.br/pt-br/pessoas/docentes/paolo-nosella" target="_blank"
-            title="Paolo Nosella">Paolo Nosella</a>).</p>
-
-        <p>Así que las alternativas han sido solo "la receta o la denuncia" (<a
-            href="https://publicacoes.fcc.org.br/cp/article/view/1400" title="María Umbelina Caiafa Salgado"
-            target="_blank">María Umbelina Caiafa Salgado</a>). Falta
-          describir lo que realmente sucede. Solo cuando describamos la práctica pedagógica tal como es en el aula
-          podremos construir una nueva Didáctica.</p>
-
-        <p>Esa descripción (investigaciones desde los años 70 de sociólogos, psicólogos sociales, lingüistas,
-          antropólogos) estudia la "ecología del aula", la interacción simbólica, el lenguaje verbal y no verbal. </p>
-
-        <ul>
-          <p>Algunos de esos elementos que pasan en el aula, más allá de la "competencia técnica", son:</p>
-          <li>Cómo se da la interacción simbólica entre profesor y alumno.</li>
-          <li>La influencia de la historia de la escuela, dónde está ubicada, cómo es el edificio y el aula.</li>
-          <li>Las ideas que profesores y alumnos tienen sobre el saber y el poder.</li>
-          <li>Las formas de control que el profesor ejerce sobre el conocimiento y sobre el alumno (eso es una forma
-            concreta de control social).</li>
-          <li>Cómo el profesor construye una imagen social del aula y de los alumnos, y ellos una imagen del profesor
-            (como los estereotipos, el efecto halo, las profecías autocumplidas).</li>
-          <li>Cómo el profesor usa su privacidad y autonomía en el aula, y cómo maneja las decisiones urgentes del "aquí
-            y ahora".</li>
-        </ul>
-
-        <p>En esta forma de verlo, el contenido de la Didáctica no sería el proceso de enseñanza-aprendizaje, sino todo
-          el conocimiento que se produce al estudiar el aula (autores como <a
-            href="https://en.wikipedia.org/wiki/John_Eggleston_(professor)" target="_blank"
-            title="Samuel John Eggleston">Eggleston</a>
-          ,
-          <a href="https://casbs.stanford.edu/people/ned-flanders" target="_blank" title="Ned Arthur Flanders">
-            Flanders
-          </a>, <a href="https://en.wikipedia.org/?curid=53503549" target="_blank" title="Sara Delamont">Delamont</a>,
-          <a href="https://dbpedia.org/page/David_Hargreaves_(academic)" target="_blank"
-            title="David Hargreaves">Hargreaves</a>,
-          <a href="https://shs.cairn.info/la-relation-educative--9782130523352?lang=fr" target="_blank"
-            title="Marcel Postic">
-            Postic
-          </a>, <a href="https://en.wikipedia.org/wiki/Robert_Rosenthal_(psychologist)" target="_blank"
-            title="Robert Rosenthal">Rosenthal</a> & <a href="https://en.wikipedia.org/wiki/Lenore_Jacobson"
-            target="_blank" title="Lenore F Jacobson">Jacobson</a>,
-          <a href="https://pt.wikipedia.org/wiki/Michael_Stubbs" target="_blank" title="Michael Stubbs">Stubbs</a>, <a
-            href="https://es.wikipedia.org/wiki/Pierre_Bourdieu" target="_blank" title="Pierre Bourdieu">Bourdieu</a>,
-          <a href="https://es.wikipedia.org/wiki/Basil_Bernstein" target="_blank" title="Basil Bernstein">Bernstein</a>,
-          <a href="https://es.wikipedia.org/wiki/Michael_Halliday" target="_blank"
-            title="Michael Alexander Kirkwood Halliday">Halliday</a>, etc.).
-        </p>
-
-        <p>Las Didácticas Específicas (o Prácticas de la Enseñanza) sí pueden estudiar el proceso de
-          enseñanza-aprendizaje de una materia concreta, y pueden dar recetas útiles para esa materia (por ejemplo, cómo
-          enseñar Portugués usando Lingüística, Psicolingüística, etc.). Pero en la idea que propone <a
-            href="https://pt.wikipedia.org/wiki/Magda_Soares" title="Magda Becker Soares" target="_blank">Magda</a>, las
-          Prácticas de la Enseñanza se encargan de aplicar las teorías, mientras que la Didáctica General aporta la
-          mirada de los elementos que van más allá del contenido específico y que son la esencia del fenómeno "aula".
-        </p>
-      </section>
-
-    </article>
-    <article>
-      <h2 class="title">"¿PORQUÉ Y PARA QUÉ LA DIDÁCTICA?" - <a
-          href="https://es.wikipedia.org/wiki/Alicia_Rosal%C3%ADa_Wigdorovitz_de_Camilloni" target="_blank"
-          title="Alicia Rosalía Wigdorovitz de Camilloni">Alicia R. W.
-          de Camilloni</a></h2>
-      <img src="./src/alicia.jpg" alt="Imagen de Alicia Rosalía Wigdorovitz de Camilloni">
-
-      <section>
-        <h3>¿Por qué y para qué sirve la Didáctica?</h3>
-        <p>
-          Este texto defiende que la Didáctica es necesaria, siempre que se construya de cierta manera. Para explicarlo,
-          la autora plantea ocho supuestos falsos; si alguien creyera esos supuestos, pensaría que la Didáctica no
-          sirve.
-          Pero después los rebate uno por uno.
-        </p>
-        <ol>
-          <p>Supuestos que harían innecesaria la Didáctica (y por qué están mal):</p>
-          <li>Si cualquier forma de influir sobre las personas (incluso el adoctrinamiento) fuera válida, sin importar
-            la libertad del alumno.
-            <p class="warning"> Pero no lo es, hay límites éticos.</p>
-          </li>
-          <li>Si todos los métodos de enseñanza fueran igual de buenos y efectivos.
-            <p class="warning">Pero no, algunos funcionan mejor que otros.</p>
-          </li>
-          <li>Si los contenidos se debieran enseñar con la misma lógica que tienen en las disciplinas académicas.
-            <p class="warning">No, hay que adaptarlos.</p>
-          </li>
-          <li>Si las decisiones curriculares ya estuvieran resueltas y no hubiera que revisarlas.
-            <p class="warning">El currículum siempre se puede mejorar.</p>
-          </li>
-          <li>Si la desigualdad de aprendizajes (que solo algunos lleguen lejos) fuera deseable o imposible de cambiar.
-            <p class="warning">No, todos pueden aprender más.</p>
-          </li>
-          <li>Si las aptitudes de los alumnos fueran un límite natural e inamovible, que determina quién puede aprender.
-            <p class="warning">La educación puede superar esos límites.</p>
-          </li>
-          <li>Si alcanzara con aplicar reglas de evaluación para resolver todos los problemas.
-            <p class="warning">La evaluación es más compleja.</p>
-          </li>
-          <li>Si enseñar fuera fácil, dependiera solo del talento o la intuición, y no se pudiera mejorar.
-            <p class="warning">Enseñar se puede aprender y mejorar.</p>
-          </li>
-        </ol>
-
-        <ul>
-          <p>
-            Entonces, la Didáctica sirve porque:
-          </p>
-          <li>Siempre se puede enseñar mejor.</li>
-          <li>Hay que revisar los currículos todo el tiempo.</li>
-          <li>Hay que elegir y crear estrategias de enseñanza y evaluación.</li>
-          <li>Tenemos el compromiso de que todos los alumnos aprendan lo indispensable.</li>
-          <li>Hay que juntar aportes de distintas disciplinas e investigar sobre la enseñanza.</li>
-          <li>Enseñar requiere reflexión constante.</li>
-        </ul>
-
-        <h4>
-          Definición y tareas de la didáctica:
-        </h4>
-        <p>
-          La didáctica es una disciplina teórica que estudia las prácticas de enseñanza. Describe, explica, fundamenta y
-          propone normas para resolver problemas pedagógicos. No es neutral: se compromete con prácticas sociales
-          orientadas a diseñar, implementar y evaluar programas, situaciones didácticas, materiales, estrategias,
-          ambientes de aprendizaje, evaluaciones y la calidad educativa.
-        </p>
-        <p>
-          Responde preguntas clave como: ¿para qué educamos?, ¿cómo lograrlo?, ¿qué, cuándo y cómo enseñar?, ¿cómo
-          enseñar a todos con buenos resultados?, ¿cómo diseñar secuencias y materiales? Todo esto es responsabilidad de
-          la didáctica.
-        </p>
-      </section>
-      <section>
-        <h3>
-          DIDÁCTICA GENERAL Y DIDÁCTICAS ESPECÍFICAS
-        </h3>
-        <ul>
-
-          <li>
-            <strong>Didáctica general</strong>: se ocupa de problemas de enseñanza en cualquier materia, nivel
-            educativo, edad o tipo de
-            institución. Busca principios que sirvan para todos.
-          </li>
-          <li><strong>Didácticas específicas</strong>: desarrollan conocimiento para áreas particulares de la enseñanza
-            (por ejemplo,
-            didáctica de la matemática, de la lengua, etc.).
-          </li>
-        </ul>
-        <ol>
-          <p>
-            ¿Cómo se clasifican las didácticas específicas?
-          </p>
-          <li>Por niveles educativos
-            <p class="example">
-              (inicial, primario, secundario, superior, universitario).
-            </p>
-          </li>
-          <li>Por edades de los alumnos
-            <p class="example">
-              (niños, adolescentes, adultos, adultos mayores).
-            </p>
-          </li>
-          <li>Por disciplinas
-            <p class="example">
-              (Matemática, Lengua, Ciencias Sociales, etc.).
-            </p>
-          </li>
-          <li>Por tipo de institución
-            <p class="example">
-              (educación formal o no formal, rural/urbana, capacitación laboral, recreativa).</p>
-          </li>
-          <li>Por características de los alumnos
-            <p class="example">(inmigrantes, minorías culturales, necesidades especiales, etc.)</p>
-          </li>
-        </ol>
-        <ol>
-          <p>
-            Relación entre didáctica general y específicas (según <a href="https://de.wikipedia.org/wiki/Wolfgang_Klafki" target="_blank" title="Wolfgang Klafki">Klafki</a>, 5 tesis):
-          </p>
-          <li>No es una relación jerárquica, sino de ida y vuelta.</li>
-          <li>Se basan en igualdad y cooperación.</li>
-          <li>Se necesitan mutuamente.</li>
-          <li>Las didácticas específicas tienen aportes propios e independientes.</li>
-          <li>Los modelos específicos pueden ser más detallados que los generales.</li>
-        </ol>
-        <ul>
-
-          <p>Ideas principales:</p>
-          <li>La didáctica no es como un árbol (metáfora de <a
-              href="https://es.wikipedia.org/wiki/Christopher_Alexander" target="_blank"
-              title="Christopher Alexander">Christopher Alexander</a> ), sino más bien una red de
-            conocimientos.</li>
-          <li>La didáctica general se acerca más a teorías del aprendizaje, la cognición y la filosofía; las específicas
-            están más cerca de la práctica.</li>
-          <li>A veces se desarrollan a ritmos distintos y hasta se contradicen.</li>
-          <li>Ejemplos de cómo se ayudan mutuamente: <span title="(Thorndike, cognición situada)">teoría de la
-              transferencia</span>, cambio conceptual, conflicto socio-cognitivo, aprendizaje colaborativo.</li>
-          <li>La teoría del currículo y la teoría de la evaluación son aportes propios de la didáctica general que
-            ninguna específica podría integrar sola.</li>
-          <li>El alumno es una persona completa; no hay que darle un mosaico de programas separados.</li>
-          <li>Ninguna didáctica (general ni específica) es autónoma del todo; todas aportan a una acción pedagógica con
-            sentido social e integral.</li>
-        </ul>
-        <h3>Conclusión:</h3>
-        <p>
-          Las relaciones son complejas y es necesario que se nutran entre sí. La didáctica general no
-          reemplaza a las específicas ni al revés; forman una familia de disciplinas con rasgos en común.
-        </p>
-      </section>
-    </article>
-    <article>
-      <h2 class="title">
-        "Reflexiones acerca de la actualidad de la didáctica" - <a
-          href="https://gdc.iflysib.unlp.edu.ar/es-ar/sofia-picco" target="_blank">Sofía Picco</a>
-      </h2>
-      <img src="./src/sofia.webp" alt="Imagen de Sofia Picco">
-      <section>
-        <p>Ella habla sobre el lado normativo de la didáctica, los
-          desafíos en Argentina y su relación con lo que pasa en Latinoamérica. Se destaca que la didáctica, desde sus
-          orígenes, tiene una dimensión normativa que sigue vigente y que aporta conceptos y herramientas para ayudar al
-          docente.</p>
-        <p>Se reflexiona sobre su
-          carácter instrumental (ser una "caja de herramientas") y sobre que los docentes piden que les sirva para
-          resolver problemas. Se analiza si su lado normativo sigue siendo útil hoy, con foco en Argentina y mirada
-          hacia Colombia.</p>
-        <h3>Didáctica: teorías sobre la enseñanza</h3>
-        <p>La didáctica es un campo con varias teorías sobre la enseñanza. Tiene su propio conjunto de conceptos y una
-          parte normativa que da orientaciones para actuar. Su interlocutor principal es el docente, y se busca valorar
-          el saber práctico de quien enseña.</p>
-        <p>Se entiende la teoría como un marco conceptual de alcance medio, cerca de la práctica. La didáctica trabaja
-          en una "zona de indefinición intermedia" (<a
-            href="https://cie.uprrp.edu/nosotros/profesores-invitados/jose-gimeno-sacristan/"
-            title="José Gimeno Sacristán" target="_blank">Gimeno</a>), conectando el desarrollo teórico con los
-          compromisos de las
-          prácticas de enseñanza. Se la ve como una ciencia normativa que debe renovarse con los
-          saberes prácticos y las condiciones institucionales.</p>
-        <p>La didáctica busca explicaciones comprensivas de la enseñanza, que incluyan múltiples dimensiones y los
-          sentidos que los sujetos le dan. Se define enseñanza (<a
-            href="https://public.websites.umich.edu/~gfenster/bioprof.html" title="Gary D. Fenstermacher"
-            target="_blank">Fenstermacher</a>) como un proceso intencional entre dos
-          personas con distintos niveles de conocimiento. La buena enseñanza (definición normativa) es ético-política,
-          racionalmente justificable y con fundamentos morales, recuperando valores en contextos sociales.</p>
-        <p>La educación es un problema práctico que requiere pensar qué hacer en cada situación, teniendo en cuenta
-          valores y circunstancias ético-políticas, en tensión entre lo universal y lo particular.</p>
-      </section>
-      <section>
-        <h3>La didáctica: una disciplina actual</h3>
-        <p>La didáctica, cuyo inicio suele ubicarse en la <em><a href="https://en.wikipedia.org/wiki/Great_Didactic"
-              title="Didactica magna(La Gran Didáctica), 1633-1638" target="_blank">Didáctica Magna</a></em> de <a
-            href="https://es.wikipedia.org/wiki/Comenio" target="_blank" title="Juan Amos Comenio">Comenio</a>, ha ido
-          cambiando
-          por sus propias dinámicas, por su relación con otras disciplinas y por cómo responde a la enseñanza y la
-          escuela.
-          <a title="Alicia Rosalía Wigdorovitz de Camilloni - El saber didáctico"
-            href="https://drive.google.com/file/d/0BxJOUWL9B4iZSTNJYXRPZldBRjA/view?resourcekey=0-5UvatM8PZO6ItK4mISZExQ"
-            target="_blank">Camilloni
-            et al.</a> (2007) afirman que la didáctica es
-          necesaria siempre que se construya con ciertas
-          condiciones de legitimidad. Para eso, plantean ocho supuestos que, al ser criticados, permiten reconstruirla
-          permanentemente.
-        </p>
-
-      </section>
-      <section>
-        <h3>Ocho supuestos que justifican la necesidad de la didáctica</h3>
-        <ol>
-          <li><strong>Ética de los medios y fines pedagógicos:</strong> La didáctica evalúa si las formas de enseñar son
-            legítimas para potenciar la libertad del alumno.</li>
-          <li><strong>Diversidad de métodos y estrategias:</strong> No todos los métodos valen lo mismo para alcanzar
-            los fines educativos.</li>
-          <li><strong>Construcción de contenidos con fines pedagógicos:</strong> Los contenidos no deben enseñarse con
-            la misma lógica con que se descubrieron en la disciplina.</li>
-          <li><strong>Análisis del currículum:</strong> El currículum es un proyecto político-educativo que cambia según
-            el contexto; la didáctica debe cuestionar lo que se da por sentado y ayudar a mejorar la formación de los
-            estudiantes.</li>
-          <li><strong>Inclusión de todos en altos niveles de desempeño:</strong> La didáctica debe cuestionar las
-            desigualdades en el acceso y desarrollo cognitivo.</li>
-          <li><strong>Superar el determinismo hereditario o innatista:</strong> Los docentes no solo identifican
-            capacidades naturales; la didáctica sostiene que la educación puede superar esos límites.</li>
-          <li><strong>Evaluación de los aprendizajes:</strong> La evaluación es tan compleja que necesita intervención
-            didáctica, no solo reglas administrativas.</li>
-          <li><strong>Formación docente:</strong> La didáctica también estudia cómo se forman los profesores.</li>
-        </ol>
-        <p>Si alguien pensara que enseñar es fácil, que el profesor nace con talento o que poco se puede hacer para
-          mejorar, entonces la didáctica sería al pedo. Pero no es así: la didáctica aporta conceptos y herramientas
-          para los problemas centrales de las prácticas de enseñanza.</p>
-
-      </section>
-      <section>
-        <h3>La didáctica en diálogo
-          indispensable con el docente</h3>
-        <p>La didáctica es una disciplina normativa que une explicación, norma y utopía (<a
-            href="https://cie.uprrp.edu/nosotros/profesores-invitados/jose-gimeno-sacristan/"
-            title="José Gimeno Sacristán" target="_blank">Gimeno</a>,<a
-            href="https://es.wikipedia.org/wiki/Mar%C3%ADa_Cristina_Davini" title="María Cristina Davini"
-            target="_blank">Davini</a>).
-          Tiene un
-          fuerte compromiso con las prácticas de enseñanza y con construir un proyecto político-educativo. El componente
-          normativo no puede separarse de la utopía, porque juntos permiten la crítica, la creatividad y la construcción
-          de alternativas. La educación es un objeto abierto cuya esencia se capta en la práctica misma.</p>
-        <h4>Valores y oposición al tecnicismo</h4>
-        <p><a title="José Contreras Domingo"
-            href="https://www.scribd.com/document/369140237/Jose-Contreras-Domingo-Rastreo-biografico">Contreras</a> y
-          <a href="https://flacso.org.ar/docentes/feldman-daniel/" title="Daniel Feldman" target="_blank">Feldman</a>
-          destacan la importancia de los valores en la enseñanza, y se oponen a una normatividad
-          tecnológica (tipo recetas frías). La didáctica debe dialogar con el docente, respetando su autonomía y
-          capacidad profesional. Las normas deben orientar y colaborar, pero no decidir por el docente, que resignifica
-          las normas según las condiciones concretas de su práctica.
-        </p>
-        <h4>El docente como destinatario del discurso didáctico</h4>
-        <p>
-
-          <a title="Alicia Rosalía Wigdorovitz de Camilloni - El saber didáctico"
-            href="https://drive.google.com/file/d/0BxJOUWL9B4iZSTNJYXRPZldBRjA/view?resourcekey=0-5UvatM8PZO6ItK4mISZExQ"
-            target="_blank">Camilloni
-            et al.</a> ven al docente como un sujeto individual y empírico, capaz de traducir la teoría a la
-          práctica mediante reflexión crítica y decisión creativa. <a
-            href="https://www.fundacionkonex.org/b2773-susana-barco-de-surghi" title="Susana Barco De Surghi"
-            target="_blank">Barco</a> señala la tensión entre las urgencias del día a
-          día y los tiempos más lentos de la teoría; el docente es el actor social que tiene que llevar adelante la
-          enseñanza todos los días.
-        </p>
-        <h4>Normatividad de textura abierta</h4>
-        <p><a href="https://es.wikipedia.org/wiki/Graciela_Frigerio" title="Graciela Frigerio"
-            target="_blank">Frigerio</a> propone entender la normatividad didáctica como una orientación con "textura
-          abierta", una red en
-          cuyos huecos aparecen la libertad y creatividad del docente. <a
-            href="https://es.wikipedia.org/wiki/Mar%C3%ADa_Cristina_Davini" title="María Cristina Davini"
-            target="_blank">Davini</a> también incorpora valores, conocimientos y
-          sistematización de experiencias, formulando criterios básicos de acción que permitan adaptarse a contextos y
-          sujetos. Para <a href="https://es.wikipedia.org/wiki/Mar%C3%ADa_Cristina_Davini" title="María Cristina Davini"
-            target="_blank">Davini</a>, oponerse a toda norma didáctica equivaldría a matar la disciplina.</p>
-        <h4>La didáctica como "caja de herramientas"</h4>
-        <p><a href="https://flacso.org.ar/docentes/feldman-daniel/" title="Daniel Feldman" target="_blank">Feldman</a> y
-          <a href="https://es.wikipedia.org/wiki/Mar%C3%ADa_Cristina_Davini" title="María Cristina Davini"
-            target="_blank">Davini</a> coinciden en que la didáctica es una caja de herramientas para resolver problemas
-          de
-          enseñanza. La pregunta comeniana "¿cómo enseñar todo a todos?" se transforma hoy en "¿cómo ayudar a que muchos
-          otros enseñen?". La didáctica debe repensarse frente a la enseñanza institucionalizada y masiva, donde la
-          norma escolar es restrictiva pero también práctica.
-        </p>
-        <h4>Didáctica, escuela y crisis institucional</h4>
-        <p><a href="https://flacso.org.ar/docentes/feldman-daniel/" title="Daniel Feldman" target="_blank">Feldman</a>
-          señala que la didáctica es un discurso sobre la escolarización. <a
-            href="https://es.wikipedia.org/wiki/Flavia_Terigi" target="_blank" title="Flavia Zulema Terigi">Terigi</a>
-          agrega que la escuela está en
-          crisis y la didáctica debe mirar la enseñanza como una práctica institucionalizada, que también requiere
-          respuestas de política educativa. Hay que revisar el contrato original entre escuela y sociedad, poniendo las
-          prácticas de enseñanza en el centro.</p>
-        <p>Hoy la enseñanza puede ser virtual, reconocer ritmos diversos, incluir intereses contrahegemónicos y
-          responder a la crisis de desinstitucionalización. Por eso la didáctica debe repensarse para imaginar otra
-          escuela posible y necesaria.</p>
-      </section>
-      <section>
-        <h3>Revisando la dimensión normativa de la didáctica</h3>
-        <p>La dimensión normativa de la didáctica se entiende como aquella que retoma el intercambio con el docente y el
-          vínculo con las prácticas de enseñanza. No son recetas rígidas, sino orientaciones de "textura abierta"
-          (<a href="https://es.wikipedia.org/wiki/Graciela_Frigerio" title="Graciela Frigerio"
-            target="_blank">Frigerio</a>) que permiten la creatividad y resignificación por parte del docente. Así se
-          genera un espacio
-          intermedio entre la norma didáctica y la acción del docente.</p>
-        <p><a href="https://flacso.org.ar/docentes/feldman-daniel/" title="Daniel Feldman" target="_blank">Feldman</a> y
-          <a href="https://es.wikipedia.org/wiki/Flavia_Terigi" target="_blank" title="Flavia Zulema Terigi">Terigi</a>
-          plantean que la didáctica debe mirar la enseñanza dentro de los grandes sistemas educativos,
-          evitando respuestas fuera de contexto. Aun así, se recuperan rasgos de las prácticas artesanales para repensar
-          la disciplina.
-        </p>
-        <h4>Aportes de <a href="https://es.wikipedia.org/wiki/John_Dewey" title="John Dewey" target="_blank">Dewey</a> y
-          otros autores</h4>
-        <p><a href="https://es.wikipedia.org/wiki/John_Dewey" title="John Dewey" target="_blank">Dewey</a> ( <span
-            title="Logic: The Theory of Inquiry (1938)">1950</span>) rechaza la oposición entre arte y ciencia en
-          educación. Critica el uso de reglas como
-          procedimientos mecánicos: el maestro formado no trata los hallazgos científicos como imposiciones rígidas. La
-          ciencia debe ser un instrumento que ilumine, no una autoridad incuestionable.</p>
-        <p>El docente cuenta con normas didácticas construidas sobre buenas prácticas, pero siempre aparecen emergentes
-          y "zonas indeterminadas de la práctica" (<a href="https://en.wikipedia.org/wiki/Donald_Sch%C3%B6n"
-            title="Donald Alan Schön" target="_blank">Schön</a>). <a
-            href="https://education.stateuniversity.com/pages/2401/Schwab-Joseph-1909-1988.html" target="_blank"
-            title="Joseph Jackson Schwab">Schwab</a> señala que ningún principio general abarca toda
-          la
-          variabilidad de la práctica; el docente debe construir estrategias situadas.</p>
-        <p><a href="https://minoydavila.com.ar/ovide-menin/" target="_blank" title="Ovide Menin">Menin</a>
-          defiende una "didáctica minimalista", criticando la normatividad máxima del positivismo, pero reconoce
-          que no podemos vivir sin normas. Propone una normatividad intermedia que dé parámetros básicos de acción con
-          espacios para decisiones situadas.</p>
-
-        <h4>Principios de procedimiento y trabajo colaborativo</h4>
-        <p>
-          <a href="https://es.wikipedia.org/wiki/Lawrence_Stenhouse" title="Lawrence Stenhouse"
-            target="_blank">Stenhouse</a>
-          (1991) y <a href="https://flacso.org.ar/docentes/feldman-daniel/" title="Daniel Feldman"
-            target="_blank">Feldman</a> (2002) proponen "principios de procedimiento" para el currículum práctico, que
-          orientan al docente sin determinar rígidamente la acción. La didáctica debe "salir de atrás del escritorio" y
-          trabajar "codo a codo con el maestro", acompañando la resignificación de las normas en el trabajo cotidiano.
-        </p>
-        <p>Se recupera el lugar de lo artesanal: la adecuación singular de la norma a las condiciones educacionales,
-          institucionales y sociales, pero sin dejar solo al docente. Se necesitan formas de trabajo escolar que hagan
-          real la reflexión colaborativa entre el didacta (el que estudia didáctica) y el docente.</p>
-      </section>
-      <section>
-        <h3>Conclusión:</h3>
-        <p>La didáctica tiene una clara orientación normativa hacia las prácticas de enseñanza, pero presenta tensiones
-          por resolver: cómo incluir los saberes docentes, los fines y valores, qué es reproducible y qué es
-          contingente, y las particularidades de cada sujeto y contexto.</p>
-        <p>Se propone avanzar en un enfoque multirreferenciado (<a href="https://fr.wikipedia.org/wiki/Jacques_Ardoino"
-            target="_blank" title="Jacques Ardoino">Ardoino</a>
-          ,<a href="https://es.wikipedia.org/wiki/Marta_Souto" target="_blank" title="Marta Souto">Souto</a>) que
-          articule distintas líneas teóricas
-          para entender la complejidad de la enseñanza. La dimensión normativa es parte de la disciplina: negarla sería
-          decretar el fin de la didáctica (<a href="https://es.wikipedia.org/wiki/Mar%C3%ADa_Cristina_Davini"
-            title="María Cristina Davini" target="_blank">Davini</a>).</p>
-        <p>Se necesita una modalidad cuasi-práctica (<a
-            href="https://education.stateuniversity.com/pages/2401/Schwab-Joseph-1909-1988.html" target="_blank"
-            title="Joseph Jackson Schwab">Schwab</a>
-          ) que combine aspectos generales y específicos de cada caso.
-          Finalmente, se plantea un espacio de intercambio entre didacta y docente para construir propuestas
-          sistemáticas y situadas, articulando perspectivas técnica, práctica y crítica (<a
-            href="https://flacso.org.ar/docentes/feldman-daniel/" title="Daniel Feldman" target="_blank">Feldman</a>).
-        </p>
-      </section>
-    </article>
+    </div>
   </main>
 
   <script src="logic.js"></script>
