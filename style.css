@@ -531,3 +531,17 @@ tr:last-child td {
     font-size: 0.85rem;
   }
 }
+
+
+footer{
+display: flex;
+/* flex-direction: ; */
+border-top:2px solid black  ;
+background: var(--defaultBackground);
+justify-content:center;
+align-items: center;
+text-align:center;
+padding: 5px;
+}
+
+
