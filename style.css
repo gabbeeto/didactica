@@ -54,18 +54,23 @@ header {
 main {
   gap: 5px;
 }
+
 h1 {
   font-size: var(--h1Size);
 }
+
 h2 {
   font-size: var(--h2Size);
 }
+
 h3 {
   font-size: var(--h3Size);
 }
+
 h4 {
   font-size: var(--h4Size);
 }
+
 h5 {
   font-size: var(--h5Size);
 }
@@ -126,4 +131,403 @@ li>p {
 
 .example {
   background-color: var(--exampleBackground);
+}
+
+
+
+
+/* Additional styles for the dialogue section – respects your color variables */
+/* .dialog-section { */
+  /* background-color: var(--defaultBackground); */
+  /* border: 2px solid black; */
+  /* margin: 5px; */
+  /* padding: 10px; */
+  /* border-radius: 8px; */
+  /* text-align: left; */
+/* } */
+
+.dialog-title {
+  background-color: var(--tittle);
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  font-size: var(--h3Size);
+  margin-bottom: 1rem;
+}
+
+.dialog-grid {
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.author-card {
+  background: #fff9f0;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid;
+  transition: 0.2s;
+}
+
+.author-card.magda {
+  border-left-color: #9b2c2c;
+}
+
+.author-card.alicia {
+  border-left-color: #2b6e3c;
+}
+
+.author-card.picco {
+  border-left-color: #2c6e9e;
+}
+
+.author-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.author-name img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--tittle);
+}
+
+.question {
+  font-weight: bold;
+  margin-top: 0.8rem;
+  color: #1e3a5f;
+  border-left: 3px solid var(--listBackground);
+  padding-left: 0.5rem;
+}
+
+.answer {
+  margin: 0.3rem 0 0.6rem 0;
+  font-size: var(--paragraphSize);
+}
+
+.citation {
+  font-size: 0.7rem;
+  color: #4a627a;
+  background: #eef2f7;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+}
+
+.encuentro,
+.tension,
+.normativa,
+.cierre {
+  background: #fef7e0;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--tittle);
+  color: black;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 30px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+hr {
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 570px) {
+
+  div.dialog-grid {
+    /* display: flex; */
+    /* width: 96%; */
+    flex-direction: column;
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    /* gap: 2rem; */
+    /* margin: 0 0; */
+  }
+
+  /* .dialog-section a { */
+    /* display: flex; */
+    /* flex-direction: column; */
+
+    /* width: 97%; */
+    /* gap: 10px; */
+  /* } */
+
+
+/* .dialog-section a{ */
+
+    /* display: flex; */
+    /* flex-direction: column; */
+  
+/* } */
+  .tension,
+  .encuentro {
+    display: flex;
+    /* margin: 10px; */
+    flex-direction: column;
+
+
+  }
+
+  .author-card{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    
+    justify-content:center;
+    align-items: center;
+  }
+
+  .answer{
+
+  margin: 0px;
+    
+  }
+
+
+}
+
+
+
+/* ===== RESPONSIVE TABLE – CARDS LAYOUT (no HTML changes) ===== */
+/* Works with your exact table structure: 
+   <table> with <thead> and <tbody>, columns: Dimensión | Becker Soares | Camilloni | Picco
+   On narrow screens (<720px) the table becomes a stack of cards, each card = one row.
+   Labels are generated via pseudo-elements (nth-child) so no data-* attributes needed.
+*/
+
+/* base: ensure table doesn't overflow on any device */
+table {
+  width: 100%;
+  max-width: 100%;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow-x: auto;
+}
+
+
+  table tr {
+    /* display: block; */
+    margin-bottom: 1.5rem;
+    background: var(--exampleBackground);
+    border-radius: 1.25rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2d9f0;
+    /* overflow: hidden; */
+  }
+
+/* ===== TABLE BORDERS ===== */
+/* Outer border around the whole table */
+table {
+  border-collapse: collapse;  /* simpler border model (optional: you can keep separate + border-spacing) */
+  border: 2px solid #2c2c2c;
+  border-radius: 1rem;        /* keep your rounded corners */
+  overflow: hidden;           /* ensures border-radius clips the outer border */
+}
+
+/* Borders for header cells and data cells */
+th,
+td {
+  border: 1px solid #aaa;
+  border-left: none;   /* avoid double borders on left edge */
+  border-right: none;
+}
+
+/* Restore left/right borders on first and last cells if needed */
+th:first-child,
+td:first-child {
+  border-left: 1px solid #aaa;
+}
+th:last-child,
+td:last-child {
+  border-right: 1px solid #aaa;
+}
+
+/* Optional: thicker bottom border for header */
+th {
+  border-bottom: 2px solid #2c2c2c;
+}
+
+/* Keep row separators, but remove double borders between rows */
+tr:last-child td {
+  border-bottom: 1px solid #aaa;
+}
+
+
+/* responsive breakpoint – transform table into cards */
+@media (max-width: 720px) {
+  /* hide table header accessibly */
+  table thead {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+    display: none;
+  }
+
+  /* force table, tbody, rows and cells to block layout */
+  table,
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100%;
+  }
+
+  /* each row becomes a card */
+  table tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    background: var(--listBackground);
+    border-radius: 1.25rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2d9f0;
+    overflow: hidden;
+  }
+
+  /* cells behave like flex rows inside the card */
+  table td {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #f0ebfc;
+    border-right: none;
+    background: var(--exampleBackground)!important;
+    font-size: clamp(0.75rem, 3vw, 0.9rem);
+  }
+
+  /* remove border from last cell in each card */
+  table td:last-of-type {
+    border-bottom: none;
+  }
+
+  /* first column (Dimensión) becomes card header */
+  table td:first-child {
+    background: var(--htmlBackground) !important;
+    font-weight: 800;
+    font-size: 1rem;
+    border-bottom: 2px solid var(--tittle, #BDF0D7);
+    padding: 1rem;
+  }
+  /* hide any label on first cell (it's the header) */
+  table td:first-child::before {
+    display: none;
+  }
+
+  /* ===== generate labels for the three author columns ===== */
+  /* Becker Soares (second column) */
+  table td:nth-child(2)::before {
+    content: "📘 Becker Soares (1983):";
+    font-weight: 700;
+    background: var(--listBackground, #BDD4F0);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    display: inline-block;
+    flex-shrink: 0;
+    border: 0.5px solid #cfc2e8;
+    line-height: 1.3;
+  }
+
+  /* Camilloni (third column) */
+  table td:nth-child(3)::before {
+    content: "🌿 Camilloni (2007):";
+    font-weight: 700;
+    background: var(--exampleBackground, #DBF0BD);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    display: inline-block;
+    flex-shrink: 0;
+    border: 0.5px solid #cfe2c0;
+  }
+
+  /* Picco (fourth column) */
+  table td:nth-child(4)::before {
+    content: "✨ Picco (2020):";
+    font-weight: 700;
+    background: #edd9ff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    display: inline-block;
+    flex-shrink: 0;
+    border: 0.5px solid #d9c2f0;
+  }
+
+  /* allow text to wrap properly */
+  table td {
+    word-break: break-word;
+    white-space: normal;
+    hyphens: auto;
+  }
+
+  /* --- extra fine-tuning for very narrow screens (250px - 420px) --- */
+  @media (max-width: 420px) {
+    table td {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+      padding: 0.7rem 0.8rem;
+    }
+    table td::before {
+      margin-bottom: 0.2rem;
+      margin-right: 0;
+      width: auto;
+      font-size: 0.65rem;
+    }
+    table td:first-child {
+      font-size: 0.9rem;
+      padding: 0.8rem;
+    }
+    table tr {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  /* ultimate compact for 250px and below */
+  @media (max-width: 280px) {
+    table td {
+      padding: 0.6rem 0.6rem;
+      font-size: 0.75rem;
+    }
+    table td:nth-child(2)::before,
+    table td:nth-child(3)::before,
+    table td:nth-child(4)::before {
+      font-size: 0.6rem;
+      padding: 0.2rem 0.6rem;
+    }
+    table td:first-child {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+/* optional: improve readability on medium screens (701px-950px) without breaking layout */
+@media (min-width: 721px) and (max-width: 950px) {
+  table th,
+  table td {
+    padding: 0.8rem 0.6rem;
+    font-size: 0.85rem;
+  }
 }

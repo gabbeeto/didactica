@@ -4,121 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trabajo práctico de didáctica | Diálogo grupal</title>
+  <title>Trabajo práctico de didáctica </title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Additional styles for the dialogue section – respects your color variables */
-    .dialog-section {
-      background-color: var(--defaultBackground);
-      border: 2px solid black;
-      margin: 5px;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: left;
-    }
 
-    .dialog-title {
-      background-color: var(--tittle);
-      display: inline-block;
-      padding: 0.3rem 1rem;
-      border-radius: 30px;
-      font-size: var(--h3Size);
-      margin-bottom: 1rem;
-    }
-
-    .dialog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0;
-    }
-
-    .author-card {
-      background: #fff9f0;
-      border-radius: 16px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      border-left: 6px solid;
-      transition: 0.2s;
-    }
-
-    .author-card.magda {
-      border-left-color: #9b2c2c;
-    }
-
-    .author-card.alicia {
-      border-left-color: #2b6e3c;
-    }
-
-    .author-card.picco {
-      border-left-color: #2c6e9e;
-    }
-
-    .author-name {
-      font-size: 1.3rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 1rem;
-    }
-
-    .author-name img {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--tittle);
-    }
-
-    .question {
-      font-weight: bold;
-      margin-top: 0.8rem;
-      color: #1e3a5f;
-      border-left: 3px solid var(--listBackground);
-      padding-left: 0.5rem;
-    }
-
-    .answer {
-      margin: 0.3rem 0 0.6rem 0;
-      font-size: var(--paragraphSize);
-    }
-
-    .citation {
-      font-size: 0.7rem;
-      color: #4a627a;
-      background: #eef2f7;
-      display: inline-block;
-      padding: 0.2rem 0.5rem;
-      border-radius: 20px;
-    }
-
-    .encuentro,
-    .tension,
-    .normativa,
-    .cierre {
-      background: #fef7e0;
-      padding: 0.8rem 1rem;
-      border-radius: 12px;
-      margin: 1rem 0;
-    }
-
-    .badge {
-      display: inline-block;
-      background: var(--tittle);
-      color: black;
-      font-size: 0.75rem;
-      padding: 0.2rem 0.8rem;
-      border-radius: 30px;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-
-    hr {
-      margin: 1rem 0;
-      border: 1px solid #ccc;
-    }
-  </style>
 </head>
 
 <body>
@@ -128,14 +16,15 @@
 
   <main>
     <!-- ================= NUEVA SECCIÓN: DIÁLOGO GRUPAL ================= -->
-    <div class="dialog-section">
+    <!-- <div class="dialog-section"> -->
       <div class="dialog-title">🎭 La didáctica en conversación</div>
       <p><strong>Magda Becker Soares, Alicia Camilloni y Sofía Picco responden las preguntas clave:</strong></p>
 
       <!-- Grid con las tres autoras -->
-      <a href="./sum.html#soares" target="_blank">
 
         <div class="dialog-grid">
+
+      <a href="./sum.html#soares" target="_blank">
           <!-- Magda -->
           <div class="author-card magda">
             <div class="author-name">
@@ -195,7 +84,7 @@
           <div class="citation">(Picco, p. 18-20)</div>
         </div>
     </div>
-    </a>
+      </a>
     <!-- Puntos de encuentro -->
     <div class="encuentro">
       <span class="badge"> Rechazo al recetario técnico vacío</span>
@@ -230,6 +119,99 @@
         Picco: “normatividad de textura abierta […] que habilite márgenes de creatividad” (p.17).</p>
     </div>
 
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>
+              Dimensión
+            </th>
+            <th>
+              Becker Soares (1983)
+            </th>
+            <th>
+              Camilloni (2007)
+            </th>
+            <th>
+              Picco (2020)
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>
+              ¿Qué es la didáctica?
+            </td>
+            <td>
+              Disciplina en crisis de identidad. Nació "al revés": primero normas, sin investigar la práctica.
+            </td>
+            <td>
+              Disciplina teórica necesaria que estudia prácticas de enseñanza con compromiso ético y social.
+            </td>
+            <td>
+              Campo de teorías de alcance medio sobre la enseñanza, con dimensión normativa de "textura abierta".
+            </td>
+          </tr>
+          <tr>
+            <td>
+              ¿Cuál es su objeto de estudio?
+            </td>
+            <td>
+              El aula tal como es (no el proceso enseñanza-aprendizaje en abstracto).
+            </td>
+            <td>
+              Las prácticas de enseñanza en sentido amplio: currículo, estrategias, evaluación, formación docente.
+            </td>
+            <td>
+              La enseñanza como práctica política y social, con foco en el vínculo con el docente.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Postura ante la norma
+            </td>
+            <td>
+              Desconfía radicalmente. Pide describir antes de prescribir. Critica "la receta o la denuncia".
+            </td>
+            <td>
+              Defiende la norma como parte legítima de la teoría, siempre que esté fundamentada éticamente.
+            </td>
+            <td>
+              Acepta la norma pero con "textura abierta" (Frigerio). Propone principios de procedimiento.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Crítica principal
+            </td>
+            <td>
+              La didáctica nació "al revés": comenzó por donde otras disciplinas terminaron
+            </td>
+            <td>
+              Ocho supuestos falsos que harían innecesaria la didáctica (hay que rebatirlos).
+            </td>
+            <td>
+              La didáctica no puede ser tecnicista (recetario frío). La escuela está en crisis institucional.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              ¿Para qué sirve hoy?
+            </td>
+            <td>
+              Describir el aula real (ecología del aula, interacción simbólica) para construir una nueva didáctica.
+            </td>
+            <td>
+              Mejorar la enseñanza, revisar currículos, incluir a todos los alumnos en altos niveles de desempeño.
+            </td>
+            <td>
+              Ser una "caja de herramientas" que colabore con el docente, respetando su autonomía.
+            </td>
+          </tr>
+        </tbody>
+      </table>
     <!-- Cierre propio del grupo -->
     <div class="cierre">
       <span class="badge">🎓 Lo que pensamos después de leer los tres textos</span>
@@ -247,7 +229,7 @@
       </p>
     </div>
 
-    </div>
+    <!-- </div> -->
   </main>
 
   <script src="logic.js"></script>
